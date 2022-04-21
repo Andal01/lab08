@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title> EX 4 </title>
+		<style>
+			.grid-container {
+		      display: grid;
+		      grid-template-columns: auto auto;
+		    }
+		    .change{
+		    }
+		</style>
+	</head>
+	<body>
+		<div id="change" class="change">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra mauris in aliquam sem fringilla ut morbi tincidunt. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Egestas purus viverra accumsan in nisl nisi. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Nibh cras pulvinar mattis nunc sed. Mattis rhoncus urna neque viverra justo nec ultrices. Egestas quis ipsum suspendisse ultrices. Eget nunc lobortis mattis aliquam faucibus purus in. Vulputate odio ut enim blandit volutpat maecenas volutpat. Libero enim sed faucibus turpis in. Parturient montes nascetur ridiculus mus mauris vitae. Morbi non arcu risus quis varius quam. Bibendum at varius vel pharetra. Aliquam faucibus purus in massa tempor nec feugiat nisl. Purus semper eget duis at tellus at urna. Ultricies leo integer malesuada nunc. A scelerisque purus semper eget. Tellus in metus vulputate eu scelerisque felis.</p>
+		</div>
+		<script>
+			function borChange(){
+				var r = document.getElementById("brv").value;
+				var g = document.getElementById("bgv").value;
+				var b = document.getElementById("bbv").value;
+				var w = document.getElementById("width").value;
+				document.getElementById("change").style.color = 'rgb(' + r + ',' + g + ',' + b + ')';
+				document.getElementById("change").style.width = w;
+			}
+			function backChange(){
+				var r = document.getElementById("bcrv").value;
+				var g = document.getElementById("bcgv").value;
+				var b = document.getElementById("bcbv").value;
+				document.getElementById("change").style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+			}
+		</script>
+		<div class="grid-container">
+			<div>
+				<h3>Border:</h3>
+				<p>Enter value from 0 to 255</p>
+				<label>Red Value:</label>
+				<input type="text" id="brv"><br><br>
+				<label>Green Value:</label>
+				<input type="text" id="bgv"><br><br>
+				<label>Blue Value:</label>
+				<input type="text" id="bbv"><br><br>
+				<label>Width:</label>
+				<input type="text" id="width"><br><br>
+				<button onclick="borChange()">CHANGE</button>
+				<div id="result"></div>	
+			</div>
+			<div>
+				<h3>Background Color:</h3>
+				<p>Enter value from 0 to 255</p>
+				<label>Red Value:</label>
+				<input type="text" id="bcrv"><br><br>
+				<label>Green Value:</label>
+				<input type="text" id="bcgv"><br><br>
+				<label>Blue Value:</label>
+				<input type="text" id="bcbv"><br><br>
+				<button onclick="backChange()">CHANGE</button>
+				<div id="result"></div>	
+			</div>
+		</div>
+	</body>
+</html>

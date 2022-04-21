@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title> EX 2 </title>
+		<style>
+			.display{
+				height: 80%;
+				width: 80%;
+			}
+			.show{
+
+			}
+			.hide{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			let currentPage = 1;
+			function prev(){
+				if (currentPage == 1){
+					document.getElementById(currentPage.toString()).classList.remove('show');
+					document.getElementById(currentPage.toString()).classList.add('hide');
+					currentPage = 5;
+					document.getElementById(currentPage.toString()).classList.remove('hide');
+					document.getElementById(currentPage.toString()).classList.add('show');
+				}else{
+					document.getElementById(currentPage.toString()).classList.remove('show');
+					document.getElementById(currentPage.toString()).classList.add('hide');
+					currentPage--;
+					document.getElementById(currentPage.toString()).classList.remove('hide');
+					document.getElementById(currentPage.toString()).classList.add('show');
+				}
+			}
+			function next(){
+				if(currentPage == 5){
+					document.getElementById(currentPage.toString()).classList.remove('show');
+					document.getElementById(currentPage.toString()).classList.add('hide');
+					currentPage = 1;
+					document.getElementById(currentPage.toString()).classList.remove('hide');
+					document.getElementById(currentPage.toString()).classList.add('show');
+				}else{
+					document.getElementById(currentPage.toString()).classList.remove('show');
+					document.getElementById(currentPage.toString()).classList.add('hide');
+					currentPage++;
+					document.getElementById(currentPage.toString()).classList.remove('hide');
+					document.getElementById(currentPage.toString()).classList.add('show');
+				}
+			}
+		</script>
+		<div class="show" id="1">
+			<img class="display" src="Slime Wallpaper.jpg">
+		</div>
+		<div class="hide" id="2">
+			<img class="display" src="salt.png">
+		</div>
+		<div class="hide" id="3">
+			<img class="display" src="salt1.png">
+		</div>
+		<div class="hide" id="4">
+			<img class="display" src="page1.png">
+		</div>
+		<div class="hide" id="5">
+			<img class="display" src="page2.png">
+		</div>
+		<button onclick="prev()">Previous</button>
+		<button onclick="next()">Next</button>
+	</body>
+</html>

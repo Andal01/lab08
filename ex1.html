@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title> EX 1 </title>
+	</head>
+	<body>
+		<script>
+			function verify(){
+				let p1 = document.getElementById('pass').value;
+				let p2 = document.getElementById('repass').value;
+				if(p1.length < 8){
+					document.getElementById("result").textContent = "The password must be at least 8 characters long.";
+				}else if(p1 == p2){
+					document.getElementById("result").textContent = "Passwords Match";
+				}else{
+					document.getElementById("result").textContent = "Passwords Do Not Match";
+				}
+			}
+		</script>
+		  <label for="fname">Enter Password:</label>
+		  <input type="text" id="pass"><br><br>
+		  <label for="lname">Reenter Password:</label>
+		  <input type="text" id="repass"><br><br>
+		  <button onclick="verify()">Verify</button>
+		  <div id="result"></div>
+	</body>
+</html>
